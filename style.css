@@ -1,81 +1,102 @@
-/* GLOBAL */
+/* GLOBAL RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
-    color: #222;
+    background-color: #0f0f0f;
+    color: #ffffff;
 }
 
 /* NAVIGATION */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
+    padding: 18px 50px;
     position: sticky;
     top: 0;
-    background: white;
+    background: #111111;
     z-index: 100;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #222;
 }
+
 .nav-logo {
     font-size: 22px;
     font-weight: bold;
+    color: #ffffff;
 }
+
 .nav-links li {
     display: inline;
     margin-left: 25px;
 }
+
 .nav-links a {
     text-decoration: none;
-    color: #222;
+    color: #ccc;
     font-weight: 500;
-}
-.nav-links a:hover {
-    color: #4b4dd9;
+    transition: 0.3s ease;
 }
 
-/* HERO */
+.nav-links a:hover {
+    color: #7c4dff;
+}
+
+/* HERO SECTION */
 .hero-section {
-    background: linear-gradient(135deg, #4b4dd9, #667eea);
-    height: 80vh;
+    background: linear-gradient(135deg, #000000, #1c1c1c);
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
     padding: 0 20px;
 }
+
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 52px;
     margin-bottom: 10px;
-}
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.btn {
-    background: white;
-    color: #4b4dd9;
-    padding: 12px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+    background: linear-gradient(90deg, #7c4dff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* SECTIONS */
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #bbbbbb;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7c4dff, #00d4ff);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECTION COMMON */
 .section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 80px 20px;
+    max-width: 1100px;
     margin: auto;
     text-align: center;
 }
+
 .section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: #7c4dff;
 }
 
 /* SKILLS */
@@ -85,47 +106,86 @@ body {
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .skills-grid span {
-    background: #eee;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-weight: 500;
+    background: #1a1a1a;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #2c2c2c;
+    transition: 0.3s ease;
 }
 
-/* PROJECTS */
+.skills-grid span:hover {
+    background: #7c4dff;
+    transform: translateY(-5px);
+}
+
+/* PROJECT CARDS */
 .project-card {
-    background: #fafafa;
-    padding: 22px;
-    margin: 15px auto;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    max-width: 720px;
+    background: #161616;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 1px solid #2c2c2c;
+    max-width: 750px;
+    transition: 0.3s ease;
 }
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #7c4dff;
+}
+
 .project-card h3 {
-    color: #4b4dd9;
+    color: #00d4ff;
+    margin-bottom: 10px;
 }
+
+.project-card p {
+    color: #bbbbbb;
+}
+
 .project-card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 8px 18px;
-    background: #4b4dd9;
+    border-radius: 25px;
+    background: #7c4dff;
     color: white;
-    border-radius: 20px;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-card a:hover {
+    background: #00d4ff;
 }
 
 /* CONTACT */
-.contact-section p a {
-    color: #4b4dd9;
+.contact-section a {
+    color: #00d4ff;
     text-decoration: none;
-    font-weight: 500;
 }
 
 /* FOOTER */
 .footer {
-    background: #222;
-    color: white;
-    padding: 18px;
-    margin-top: 30px;
+    background: #111111;
+    padding: 25px;
     text-align: center;
+    border-top: 1px solid #222;
+    color: #888;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
 }
